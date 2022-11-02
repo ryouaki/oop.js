@@ -1,15 +1,12 @@
 const path = require('path')
 const webpack = require('webpack')
-const portfinder = require('portfinder')
 const config = require('./webpack.config')
 
 async function getPort() {
   config.mode = 'development'
-  portfinder.basePort = 8000
-  const port = await portfinder.getPortPromise()
 
   config.devServer = {
-    port,
+    port: 8000,
     hot: true,
     historyApiFallback: true,
     compress: true,

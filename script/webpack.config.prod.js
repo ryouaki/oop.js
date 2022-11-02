@@ -5,14 +5,14 @@ module.exports = (env) => {
 
   return {
     entry: {
-      "lsp-uuid": './index.js'
+      "oop": './index.js'
     },
     mode: 'production',
     output: {
       path: path.join(__dirname, 'dist'),
-      filename: 'lsp-uuid.umd.js',
+      filename: 'oop.umd.js',
       libraryTarget: 'umd',
-      library: 'LspUUID'
+      library: 'OOP'
     },
     target: ['web', 'es5'],
     module: {
